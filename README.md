@@ -18,12 +18,12 @@ Write in your terminal <code>npm install</code>
 And <code>npm start</code> after to see the project locally
 
 ## Built With
-Tthis project is assembled using Webpack
-React - to create users interface
-Redux - library to store data
-Redux-thunk - to make it asynchronous
-SASS - to style easily
-Moment - good tool to work with Date()-s
+Tthis project is assembled using Webpack</br>
+React - to create users interface</br>
+Redux - library to store data</br>
+Redux-thunk - to make it asynchronous</br>
+SASS - to style easily</br>
+Moment - good tool to work with Date()-s</br>
 
 ### Authors
 Naumenko Aleksey
