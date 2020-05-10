@@ -2,9 +2,9 @@
 This project is about customers table and their information about purchases.
 
 # Getting Started
-<h2>Installation</h2>
+## Installation
 <ul>
-  <li>All the <figure>code</figure> required to get started</li>
+  <li>All the <code>code</code> required to get started</li>
 </ul>
 http://g.recordit.co/HF3nitDbL6.gif
 
