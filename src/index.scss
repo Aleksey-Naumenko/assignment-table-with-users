@@ -50,6 +50,10 @@ body {
         th:nth-child(4) {
             width: 20%;
         }
+
+        th:nth-child(5) {
+            width: 20%;
+        }
     }
 
     &__footer {
@@ -61,4 +65,8 @@ body {
             border: none;
         }
     }
+}
+
+.order-btn {
+    width: 100%;
 }

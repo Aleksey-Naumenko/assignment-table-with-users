@@ -8,9 +8,13 @@ import "./modal.scss";
 const Modal = ({ userDetails, onModalOpen, isModalOpen }) => {
   if (!isModalOpen) return null;
 
+  const preventFromClosing = e => {
+    e.stopPropagation();
+  }
+
   return (
-    <div className="modal-container" onClick={() => onModalOpen()}>
-      <table className="modal users-table">
+    <div className="modal-container" onClick={(e) => onModalOpen(e)}>
+      <table className="modal users-table" onClick={(e) => preventFromClosing(e)}>
         <thead className="users-table__header">
           <tr>
             <th>ID замовлення</th>

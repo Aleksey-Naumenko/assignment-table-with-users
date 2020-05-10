@@ -30,7 +30,7 @@ const User = ({
         {lastMessageHours}
       </td>
       <td>
-        <button onClick={() => onShowDetails()}>Замовлення</button>
+        <button className="order-btn" onClick={() => onShowDetails()}>Замовлення</button>
       </td>
     </tr>
   );
