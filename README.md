@@ -3,39 +3,17 @@ This project is about customers table and their information about purchases.
 
 # Getting Started
 ## Installation
+Just clone or forked this repo to your machine: https://github.com/Aleksey-Naumenko/assignment-table-with-users
+<img src="http://g.recordit.co/HF3nitDbL6.gif" alt="fork or clone" />
+
+
 <ul>
   <li>All the <code>code</code> required to get started</li>
 </ul>
-http://g.recordit.co/HF3nitDbL6.gif
 
-Prerequisites
-What things you need to install the software and how to install them
+<code>npm install</code>
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
-
-Running the tests
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
-
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
 
 Built With
 Dropwizard - The web framework used
