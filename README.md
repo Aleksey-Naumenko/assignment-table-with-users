@@ -3,7 +3,9 @@ This project is about customers table and their information about purchases.
 
 # Getting Started
 ## Installation
-Just clone or forked this repo to your machine: https://github.com/Aleksey-Naumenko/assignment-table-with-users
+Just clone or fork this repo to your machine: https://github.com/Aleksey-Naumenko/assignment-table-with-users
+
+
 <img src="http://g.recordit.co/HF3nitDbL6.gif" alt="fork or clone" />
 
 
@@ -11,28 +13,20 @@ Just clone or forked this repo to your machine: https://github.com/Aleksey-Naume
   <li>All the <code>code</code> required to get started</li>
 </ul>
 
-<code>npm install</code>
+Write in your terminal <code>npm install</code>
 
+And <code>npm start</code> after to see the project locally
 
+## Built With
+Tthis project is assembled using Webpack
+React - to create users interface
+Redux - library to store data
+Redux-thunk - to make it asynchronous
+SASS - to style easily
+Moment - good tool to work with Date()-s
 
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+### Authors
+Naumenko Aleksey
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+### License
+Currently this work is for free
