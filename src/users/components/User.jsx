@@ -1,7 +1,8 @@
 import React from "react";
 import moment from "moment";
 import { connect } from "react-redux";
-import * as usersActions from "./users.actions";
+import * as usersActions from "../users.actions";
+import PropTypes from "prop-types";
 
 const User = ({
   userData,
@@ -26,11 +27,12 @@ const User = ({
       <td>{name}</td>
       <td>{from}</td>
       <td>
-        {lastMessageDate}
-        {lastMessageHours}
+        {lastMessageDate} {lastMessageHours}
       </td>
       <td>
-        <button className="order-btn" onClick={() => onShowDetails()}>Замовлення</button>
+        <button className="order-btn" onClick={() => onShowDetails()}>
+          Замовлення
+        </button>
       </td>
     </tr>
   );
@@ -39,6 +41,15 @@ const User = ({
 const mapDispatch = {
   showDetails: usersActions.getUserDetails,
   onModalOpen: usersActions.changeModalState,
+};
+
+User.propTypes = {
+  userData: PropTypes.shape(),
+  userNumber: PropTypes.number,
+  page: PropTypes.number,
+  usersPerPage: PropTypes.number,
+  showDetails: PropTypes.func,
+  onModalOpen: PropTypes.func,
 };
 
 export default connect(null, mapDispatch)(User);

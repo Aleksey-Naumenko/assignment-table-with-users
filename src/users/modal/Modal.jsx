@@ -4,17 +4,21 @@ import { userDetailsSelector, modalOpenSelector } from "../users.selectors";
 import Order from "./Order";
 import * as usersActions from "../users.actions";
 import "./modal.scss";
+import PropTypes from "prop-types";
 
 const Modal = ({ userDetails, onModalOpen, isModalOpen }) => {
   if (!isModalOpen) return null;
 
-  const preventFromClosing = e => {
+  const preventFromClosing = (e) => {
     e.stopPropagation();
-  }
+  };
 
   return (
     <div className="modal-container" onClick={(e) => onModalOpen(e)}>
-      <table className="modal users-table" onClick={(e) => preventFromClosing(e)}>
+      <table
+        className="modal users-table"
+        onClick={(e) => preventFromClosing(e)}
+      >
         <thead className="users-table__header">
           <tr>
             <th>ID замовлення</th>
@@ -41,6 +45,12 @@ const mapState = (state) => {
 
 const mapDispatch = {
   onModalOpen: usersActions.changeModalState,
+};
+
+Modal.propTypes = {
+  userDetails: PropTypes.shape(),
+  onModalOpen: PropTypes.func,
+  isModalOpen: PropTypes.bool,
 };
 
 export default connect(mapState, mapDispatch)(Modal);

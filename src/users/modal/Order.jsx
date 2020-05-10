@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Order = ({ data, included }) => {
   if (!data && !included) return null;
@@ -24,6 +25,15 @@ const Order = ({ data, included }) => {
       })}
     </>
   );
+};
+
+Order.propTypes = {
+  data: PropTypes.shape({
+    links: PropTypes.shape().isRequired,
+  }),
+  included: PropTypes.shape({
+    orders: PropTypes.array.isRequired,
+  }),
 };
 
 export default Order;

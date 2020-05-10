@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Pagination = ({ page, onNextPage, onPrevPage }) => {
   return (
@@ -16,6 +17,12 @@ const Pagination = ({ page, onNextPage, onPrevPage }) => {
       </tr>
     </tfoot>
   );
+};
+
+Pagination.propTypes = {
+  page: PropTypes.number,
+  onNextPage: PropTypes.func,
+  onPrevPage: PropTypes.func,
 };
 
 export default Pagination;

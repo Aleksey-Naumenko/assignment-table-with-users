@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import * as usersSelectors from "./users.selectors";
+import * as usersSelectors from "../users.selectors";
 import User from "./User";
 import Pagination from "./Pagination";
-import * as usersActions from "./users.actions";
-import Modal from "./modal/Modal";
+import * as usersActions from "../users.actions";
+import Modal from "../modal/Modal";
+import PropTypes from "prop-types";
 
 const UsersList = ({ users, getUsers, isModalOpen }) => {
   const [page, setPage] = useState(0);
@@ -72,6 +73,12 @@ const mapState = (state) => {
 
 const mapDispatch = {
   getUsers: usersActions.getUsersList,
+};
+
+UsersList.propTypes = {
+  users: PropTypes.array,
+  getUsers: PropTypes.func,
+  isModalOpen: PropTypes.bool,
 };
 
 export default connect(mapState, mapDispatch)(UsersList);

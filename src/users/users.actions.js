@@ -1,4 +1,4 @@
-import * as usersGateways from "../gateWays";
+import * as usersGateways from "./gateWays";
 
 export const GET_USERS = "USER_SEARCH";
 export const GET_USER_DATA = "GET_USER_DATA";
