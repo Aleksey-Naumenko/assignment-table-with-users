@@ -22,10 +22,10 @@ export const getUserData = (userDetails) => {
   };
 };
 
-export const getUsersList = () => {
+export const getUsersList = (quantity, interval) => {
   return (dispatch) => {
     usersGateways
-      .fetchUsers()
+      .fetchUsers(quantity, interval)
       .then((usersList) => dispatch(getUsers(usersList)));
   };
 };

@@ -9,18 +9,13 @@ import PropTypes from "prop-types";
 
 const UsersList = ({ users, getUsers, isModalOpen }) => {
   const [page, setPage] = useState(0);
-
   const usersPerPage = 15;
-  const nextPage = page * usersPerPage;
-  const showedUsers = users.slice(page * usersPerPage, nextPage + usersPerPage);
-  const currentPageOnScreen = page + 1;
 
   useEffect(() => {
-    getUsers();
+    getUsers(usersPerPage, page * usersPerPage);
   }, []);
 
   const nextPageHandler = () => {
-    if (currentPageOnScreen * usersPerPage >= users.length) return;
     setPage((page) => page + 1);
   };
 
@@ -43,7 +38,7 @@ const UsersList = ({ users, getUsers, isModalOpen }) => {
           </tr>
         </thead>
         <tbody className="users-table__body">
-          {showedUsers.map((user, index) => (
+          {users.map((user, index) => (
             <User
               key={user.id}
               userData={user}
@@ -56,7 +51,7 @@ const UsersList = ({ users, getUsers, isModalOpen }) => {
         <Pagination
           onNextPage={nextPageHandler}
           onPrevPage={prevPageHandler}
-          page={currentPageOnScreen}
+          page={page}
         />
       </table>
       {isModalOpen && <Modal />}
