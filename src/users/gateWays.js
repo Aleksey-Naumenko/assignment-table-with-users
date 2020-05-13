@@ -16,7 +16,7 @@ export const fetchUsers = (quantity, interval) => {
   });
 };
 
-export const fetchUserDetails = (id) => {
+export const fetchUserDetails = id => {
   return fetch(`https://api.leeloo.ai/api/v1/accounts/${id}?include=orders`, {
     method: "GET",
     headers: {
